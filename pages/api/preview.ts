@@ -11,7 +11,7 @@ export default async function handler(
     return res.status(401).json({ message: 'Invalid token' });
   }
   // @ts-ignore
-  const product = await getProduct(contentful.client, productId);
+  const product = await getProduct(contentful.previewClient, productId);
   if (!product.items.length) {
     return res.status(401).json({ message: 'Invalid productId' });
   }
