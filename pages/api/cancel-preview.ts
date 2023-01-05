@@ -5,5 +5,5 @@ export default async function handler(
   res: NextApiResponse
 ) {
   res.clearPreviewData();
-  res.redirect('/');
+  res.redirect('/products');
 }
