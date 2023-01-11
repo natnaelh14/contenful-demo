@@ -5,6 +5,10 @@ import { getProducts } from '../../utils/products';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const productsData = await getProducts(contentful.client);
+  console.log(
+    '🚀 ~ file: index.tsx:31 ~ RESTFUL CONTENTFUL',
+    JSON.stringify(productsData, undefined, 2)
+  );
 
   return {
     props: {
