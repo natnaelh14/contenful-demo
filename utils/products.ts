@@ -15,9 +15,7 @@ export async function getProducts(client: Object) {
 }
 
 export async function getArticles(client: Object, lang: string) {
-  {
-    /* @ts-ignore */
-  }
+
   return client.getEntries({
     content_type: 'article',
     locale: lang,
