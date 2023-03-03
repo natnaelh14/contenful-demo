@@ -4,11 +4,11 @@ import ProductCard from '../../components/Product';
 import { GraphQLClient, gql } from 'graphql-request';
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const endpoint = `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master`;
+  const endpoint = `https://graphql.contentful.com/content/v1/spaces/${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}/environments/master`;
 
   const graphQLClient = new GraphQLClient(endpoint, {
     headers: {
-      authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_TOKEN}`,
+      authorization: `Bearer ${process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN}`,
     },
   });
 
